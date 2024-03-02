@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrossCompass</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CCstyles.css">
+</head>
+<body>
+
+    <header>
+        <h1>CrossCompass</h1>
+        <img src="cclogo.png" alt="Logo" id="logo">
+    </header>
+
+    <input type="text" id="querybox">
+    <button id="searchButton" onclick="searchButtonClick()">Search</button>
+    <button id="changeBackgroundButton" onclick="changeBackgroundColor()">Change Background Color</button>
+    <button id="toggleFadeButton" onclick="toggleFade()">Toggle Fade</button>
+    <button id="feelingLuckyButton" onclick="feelingLucky()">I'm Feeling Lucky</button>
+
+    <div id="output"></div>
+
+    <script src="CCA2_Project-1.js"></script>
+
+    <script>
+        // Trigger search button click on pressing Enter key
+        $('#querybox').keydown(function(event) {
+            if (event.keyCode == 13) {
+                $('#searchButton').click();
+            }
+        });
+    </script>
+
+</body>
+</html>
